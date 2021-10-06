@@ -5,10 +5,19 @@ import javax.swing.*;
 public class Profesor extends Humano {
 
     private String [][][] imparteAsignatura;
+    private String ramo;
 
-    public Profesor(String name, String age, String gender, String[][][] imparteAsignatura) {
+    public Profesor(String name, String age, String gender, String[][][] imparteAsignatura,  String ramo) {
         super(name, age, gender);
         this.imparteAsignatura = imparteAsignatura;
+    }
+
+    public String getRamo() {
+        return ramo;
+    }
+
+    public String setRamo(String ramo) {
+         return this.ramo = ramo;
     }
 
     public String[][][] getImparteAsignatura() {
@@ -72,6 +81,7 @@ public class Profesor extends Humano {
         JOptionPane.showMessageDialog(null, "El nombre del docente es: " + getName());
         JOptionPane.showMessageDialog(null, "La edad del docente es: " + getAge());
         JOptionPane.showMessageDialog(null, "El género del docente es: " + getGender());
+        JOptionPane.showMessageDialog(null, "La asignatura que el docente imparte es: " + getRamo());
         JOptionPane.showMessageDialog(null, "El porcentaje de asistencia del docente es: " + calcularPorcentajeDeAsistencia());
     }
 }

@@ -17,11 +17,14 @@ public class ListaProfesor {
         String name = Input("Nombre de Docente");
         String age = Input("Edad de Docente");
         String gender = Input("Género de Docente");
+        String ramo = Input("Ingrese la asignatura que imparte el docente");
         String[][][] imparteAsignatura = new String[NSemana][NDias][eventos];
-        Profesor profesor = new Profesor(name,age,gender,imparteAsignatura);
+        Profesor profesor = new Profesor(name,age,gender,imparteAsignatura,ramo);
         profesor.setName(name);
         profesor.setAge(age);
         profesor.setGender(gender);
+        profesor.setRamo(ramo);
+
         this.ListaProfesor.add(profesor);
     }
     public Profesor getProfesor(int IDProfesor){
